@@ -5,7 +5,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 
-#define HTTP_SERVER utils_inet_addr(0,0,0,0) //Change this to your SERVER IP
+#define HTTP_SERVER utils_inet_addr(0,0,0,0) //Buraya Kendi VPS Ip ni yazacan virgül ile
 
 #define EXEC_MSG            "yes\n"
 #define EXEC_MSG_LEN        3

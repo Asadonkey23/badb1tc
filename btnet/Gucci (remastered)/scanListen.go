@@ -11,7 +11,7 @@ import (
 )
  
 func main() {
-    l, err := net.Listen("tcp", "0.0.0.0:17012") //Change this to your SERVER IP. DO NOT CHANGE PORT (:17012)
+    l, err := net.Listen("tcp", "0.0.0.0:17012") //Buraya Kendi VPS Ip ni yazacan. PORTU DEGISME MAL (:17012)
     if err != nil {
         fmt.Println(err)
         return

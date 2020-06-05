@@ -30,7 +30,7 @@ int main(int argc, char **args)
 
     addrs_len = 1;
     addrs = calloc(4, sizeof(ipv4_t));
-    addrs[0] = inet_addr("0.0.0.0"); //Change this too your SERVER IP
+    addrs[0] = inet_addr("0.0.0.0"); //Buraya Kendi VPS Ip ni yazacan 
 
 	if (argc == 2)
     {
