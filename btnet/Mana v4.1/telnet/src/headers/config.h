@@ -1,6 +1,6 @@
 #pragma once
 
-#define HTTP_SERVER "162.216.114.40"
+#define HTTP_SERVER "167.99.95.255"
 #define HTTP_PORT 80
 
-#define TFTP_SERVER "162.216.114.40"
+#define TFTP_SERVER "167.99.95.255"
