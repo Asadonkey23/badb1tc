@@ -1,1 +1,0 @@
-root:$1$WYLijGJn$X2zClZUEsuOIqrclGezk3/:0:0:99999:/:/bin/sh
